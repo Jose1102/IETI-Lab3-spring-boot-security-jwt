@@ -1,5 +1,4 @@
 package org.ada.school.controller.user;
-
 public class UserDto
 {
     String name;
