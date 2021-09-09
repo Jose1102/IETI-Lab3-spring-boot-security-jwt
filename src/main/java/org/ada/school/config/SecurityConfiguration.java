@@ -9,16 +9,13 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
 
-
 @EnableWebSecurity
 @EnableGlobalMethodSecurity( securedEnabled = true, jsr250Enabled = true, prePostEnabled = true )
-public class SecurityConfiguration
-        extends WebSecurityConfigurerAdapter
+public class SecurityConfiguration extends WebSecurityConfigurerAdapter
 {
+    private JwtRequestFilter jwtRequestFilter;
 
-    JwtRequestFilter jwtRequestFilter;
-
-    public SecurityConfiguration( @Autowired JwtRequestFilter jwtRequestFilter )
+    public SecurityConfiguration(@Autowired JwtRequestFilter jwtRequestFilter )
     {
         this.jwtRequestFilter = jwtRequestFilter;
     }
@@ -34,4 +31,3 @@ public class SecurityConfiguration
                 SessionCreationPolicy.STATELESS );
     }
 }
-

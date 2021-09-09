@@ -25,4 +25,3 @@ public class TokenDto
         return expirationDate;
     }
 }
-

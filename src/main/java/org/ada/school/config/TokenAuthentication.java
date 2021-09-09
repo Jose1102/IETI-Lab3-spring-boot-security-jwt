@@ -4,13 +4,11 @@ package org.ada.school.config;
 import org.springframework.security.authentication.AbstractAuthenticationToken;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class TokenAuthentication
-        extends AbstractAuthenticationToken
+public class TokenAuthentication extends AbstractAuthenticationToken
 {
     String token;
 
@@ -53,4 +51,3 @@ public class TokenAuthentication
 
 
 }
-
